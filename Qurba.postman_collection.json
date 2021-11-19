@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "6cfaba9d-42fe-4c9e-bfbe-13a5e671b61c",
+		"name": "Qurba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "Get all restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BACKEND_URL}}/restaurants",
+							"host": [
+								"{{BACKEND_URL}}"
+							],
+							"path": [
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all near restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BACKEND_URL}}/restaurants/near",
+							"host": [
+								"{{BACKEND_URL}}"
+							],
+							"path": [
+								"restaurants",
+								"near"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"CCC\",\n    \"uniqueName\": \"156acs\",\n    \"cuisine\": \"Burger\",\n    \"location\": {\n        \"coordinates\": [-59.2662, 48.156]\n    },\n    \"owner\": \"6197b24779ea7c52de3eb49b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BACKEND_URL}}/restaurants",
+							"host": [
+								"{{BACKEND_URL}}"
+							],
+							"path": [
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get restaurant by id or unique name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BACKEND_URL}}/restaurants/619666838ea7fa92ff714268",
+							"host": [
+								"{{BACKEND_URL}}"
+							],
+							"path": [
+								"restaurants",
+								"619666838ea7fa92ff714268"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BACKEND_URL}}/users",
+							"host": [
+								"{{BACKEND_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create normal user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"Ahmed\",\n    \"type\": \"Normal\",\n    \"location\": {\n        \"coordinates\": [51, 615]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BACKEND_URL}}/users",
+							"host": [
+								"{{BACKEND_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create owner user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"Ali\",\n    \"type\": \"Owner\",\n    \"location\": {\n        \"coordinates\": [512145, 61156]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BACKEND_URL}}/users",
+							"host": [
+								"{{BACKEND_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter users by cuisine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BACKEND_URL}}/users?cuisine=Sushi",
+							"host": [
+								"{{BACKEND_URL}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "cuisine",
+									"value": "Sushi"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
